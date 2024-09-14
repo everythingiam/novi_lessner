@@ -1,0 +1,38 @@
+$xs-screen: 359px;
+$md-screen: 639;
+$lg-screen: 1023px;
+$xl-screen: 1368px;
+
+body{
+  max-width: $xl-screen;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: $xs-screen) {
+  body{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media ((min-width: ($xs-screen + 1)) and (max-width: $md-screen)) {
+  body{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media ((min-width: ($md-screen + 1)) and (max-width: $xl-screen)) {
+  body{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: $xl-screen) {
+  body{
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
