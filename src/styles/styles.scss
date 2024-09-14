@@ -32,5 +32,6 @@ body {
 
   h1 {
     @extend .h1-text;
+    max-width: 90rem;
   }
 }

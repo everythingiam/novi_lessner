@@ -1,18 +1,9 @@
+@import './screens.scss';
+
 html {
   /* 1 rem == 10px */
   font-size: 62.5%;
 }
-
-// @media (min-width: 1300px) {
-//   html {
-//     font-size: 65%;
-//   }
-// }
-// @media (max-width: 700px) {
-//   html {
-//     font-size: 60%;
-//   }
-// }
 
 @font-face {
   font-family: 'Circle Light';
@@ -90,3 +81,53 @@ html {
   font-size: 11.1rem;
   line-height: auto;
 }
+
+@media (max-width: $md-screen) {
+  .menu-text{
+    font-size: 2rem;
+    line-height: auto;
+  }
+  .h1-text{
+    font-size: 3.2rem;
+    line-height: 100%;
+  }
+  .h2-text{
+    font-size: 2.8rem;
+    line-height: 100%;
+  }
+  .h4-text{
+    font-size: 2rem;
+    line-height: 130%;
+  }
+  .lead-text{
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+  }
+  .p1-reg-text{
+    font-size: 1.5rem;
+    line-height: auto;
+  }
+  .p1-light-text{
+    font-size: 1.8rem;
+    line-height: 130%;
+  }
+  .p2-light-text{
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+  .p3-reg-text{
+    font-size: 1.2rem;
+    line-height: 130%;
+  }
+  .button-text{
+    font-size: 1.6rem;
+    line-height: 100%;
+  }
+  .factoid-text{
+    font-size: 6rem;
+    line-height: auto;
+  }
+}
+
+
+
