@@ -3,6 +3,34 @@
 @import './screens.scss';
 @import './reset.scss';
 
+body {
+  @extend .p3-reg-text;
+  * {
+    color: $color-main;
+  }
+}
 
+.h1-with-crumps {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
 
+    li {
+      @extend .p3-reg-text;
 
+      &:not(:last-child)::after {
+        content: '/';
+        margin: 0 0.4rem 0 0.2rem;
+      }
+    }
+
+    a.active {
+      color: $color-main-40;
+    }
+  }
+
+  h1 {
+    @extend .h1-text;
+  }
+}

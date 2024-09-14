@@ -2,34 +2,30 @@ html {
   /* 1 rem == 10px */
   font-size: 62.5%;
 }
-body{
-	@extend .p1-reg-text;
-	color: $color-main;
-}
 
-@media (min-width: 1300px) {
-  $paddings: 10rem !default;
-  html {
-    font-size: 65%;
-  }
-}
-@media (max-width: 700px) {
-  $paddings: 10rem !default;
-  html {
-    font-size: 60%;
-  }
-}
+// @media (min-width: 1300px) {
+//   html {
+//     font-size: 65%;
+//   }
+// }
+// @media (max-width: 700px) {
+//   html {
+//     font-size: 60%;
+//   }
+// }
 
 @font-face {
   font-family: 'Circle Light';
   font-weight: 300; 
   src: url('../assets/font/circle/circe-light.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Circle';
   font-weight: 400; 
   src: url('../assets/font/circle/circe.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'FYL';
   font-weight: 400; 
