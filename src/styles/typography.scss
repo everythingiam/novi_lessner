@@ -7,127 +7,134 @@ html {
 
 @font-face {
   font-family: 'Circle Light';
-  font-weight: 300; 
+  font-weight: 300;
   src: url('../assets/font/circle/circe-light.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Circle';
-  font-weight: 400; 
+  font-weight: 400;
   src: url('../assets/font/circle/circe.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'FYL';
-  font-weight: 400; 
+  font-weight: 400;
   src: url('../assets/font/fyl/FiveYearsLater.ttf') format('truetype');
 }
 
-.menu-text{
+.menu-text {
   font-family: 'Circle';
   font-size: 2rem;
-  line-height: auto;
+  line-height: 2.95rem;
 }
-.h1-text{
+.h1-text {
   font-family: 'FYL';
   text-transform: lowercase;
   font-size: 6.4rem;
   line-height: 100%;
 }
-.h2-text{
+.h2-text {
   font-family: 'FYL';
   text-transform: lowercase;
   font-size: 4.4rem;
   line-height: 100%;
 }
-.h4-text{
+.h4-text {
   font-family: 'FYL';
   text-transform: lowercase;
   font-size: 2.6rem;
   line-height: 3.6rem;
 }
-.lead-text{
+.factoid-text {
+  font-family: 'FYL';
+  font-size: 11.1rem;
+  line-height: 14.71rem;
+}
+.lead-text {
   font-family: 'Circle';
   font-size: 2.4rem;
   line-height: 3.2rem;
 }
-.p1-reg-text{
+.p1-reg-text {
   font-family: 'Circle';
   font-size: 2.2rem;
   line-height: 2.8rem;
 }
-.p1-light-text{
+.p1-light-text {
   font-family: 'Circle Light';
   font-size: 2.2rem;
   line-height: 2.8rem;
 }
-.p2-light-text{
+.p2-light-text {
   font-family: 'Circle Light';
   font-size: 1.6rem;
   line-height: 100%;
 }
-.p3-reg-text{
+.p3-reg-text {
   font-family: 'Circle';
   font-size: 1.4rem;
   line-height: 2rem;
 }
-.button-text{
+.button-text {
   font-family: 'Circle';
   font-size: 1.6rem;
   line-height: 100%;
 }
-.factoid-text{
-  font-family: 'Circle';
-  font-size: 11.1rem;
-  line-height: auto;
-}
 
-@media (max-width: $md-screen) {
-  .menu-text{
+@media (max-width: $lg-screen) {
+  .menu-text {
     font-size: 2rem;
     line-height: auto;
   }
-  .h1-text{
+  .h1-text {
     font-size: 3.2rem;
     line-height: 100%;
   }
-  .h2-text{
+  .h2-text {
     font-size: 2.8rem;
     line-height: 100%;
   }
-  .h4-text{
+  .h4-text {
     font-size: 2rem;
     line-height: 130%;
   }
-  .lead-text{
+  .factoid-text {
+    font-size: 6rem;
+    line-height: 7.95rem;
+  }
+  .lead-text {
     font-size: 1.9rem;
     line-height: 2.5rem;
   }
-  .p1-reg-text{
+  .p1-reg-text {
     font-size: 1.5rem;
-    line-height: auto;
+    line-height: 2.21rem;
   }
-  .p1-light-text{
+  .p1-light-text {
     font-size: 1.8rem;
     line-height: 130%;
   }
-  .p2-light-text{
+  .p2-light-text {
     font-size: 1.4rem;
     line-height: 120%;
   }
-  .p3-reg-text{
+  .p3-reg-text {
     font-size: 1.2rem;
     line-height: 130%;
   }
-  .button-text{
+  .button-text {
     font-size: 1.6rem;
     line-height: 100%;
   }
-  .factoid-text{
-    font-size: 6rem;
-    line-height: auto;
-  }
 }
 
-
-
+h1{ 
+  @extend .h1-text;
+}
+h2{ 
+  @extend .h2-text;
+}
+h4{ 
+  @extend .h4-text;
+}
