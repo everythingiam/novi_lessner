@@ -28,19 +28,19 @@ html {
   font-size: 2rem;
   line-height: 2.95rem;
 }
-.h1-text {
+h1 {
   font-family: 'FYL';
   text-transform: lowercase;
   font-size: 6.4rem;
   line-height: 100%;
 }
-.h2-text {
+h2 {
   font-family: 'FYL';
   text-transform: lowercase;
   font-size: 4.4rem;
   line-height: 100%;
 }
-.h4-text {
+h4 {
   font-family: 'FYL';
   text-transform: lowercase;
   font-size: 2.6rem;
@@ -79,7 +79,7 @@ html {
 .button-text {
   font-family: 'Circle';
   font-size: 1.6rem;
-  line-height: 100%;
+  line-height: auto;
 }
 
 @media (max-width: $lg-screen) {
@@ -87,15 +87,15 @@ html {
     font-size: 2rem;
     line-height: auto;
   }
-  .h1-text {
+  h1 {
     font-size: 3.2rem;
     line-height: 100%;
   }
-  .h2-text {
+  h2 {
     font-size: 2.8rem;
     line-height: 100%;
   }
-  .h4-text {
+  h4 {
     font-size: 2rem;
     line-height: 130%;
   }
@@ -129,12 +129,3 @@ html {
   }
 }
 
-h1{ 
-  @extend .h1-text;
-}
-h2{ 
-  @extend .h2-text;
-}
-h4{ 
-  @extend .h4-text;
-}
