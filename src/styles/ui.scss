@@ -7,6 +7,7 @@ $transition: 200ms ease-out;
 body {
   @extend .p3-reg-text;
   overflow-x: hidden;
+  position: relative;
   * {
     color: $color-main;
   }
@@ -53,6 +54,17 @@ body {
   }
   &.empty::after {
     background: url(../assets/icons/go-black.svg);
+  }
+
+  &.black {
+    background-color: $color-main;
+    color: $color-white;
+  }
+  &.black::after {
+    background: url(../assets/icons/go-white.svg);
+  }
+  &.small{
+    padding: 0.8rem 2.4rem;
   }
 
   @media (max-width: $lg-screen) {

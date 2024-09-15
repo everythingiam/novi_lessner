@@ -1,6 +1,155 @@
 @import './styles.scss';
 
+#header {
+  //------------------------------хедер
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  background-color: $color-white;
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .burger-label {
+    position: relative;
+    width: 4.8rem;
+    height: 4.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after,
+    .burger-line {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 0.2rem;
+      background-color: $color-main;
+      transition: all 0.2s ease;
+      border-radius: 1rem;
+    }
+
+    &::before {
+      top: 1.5rem;
+    }
+
+    &::after {
+      bottom: 1.5rem;
+    }
+  }
+
+  #menu-toggle:checked + .burger-label {
+    &::before {
+      transform: rotate(45deg);
+      top: calc(50% - 2px);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: calc(50% - 2px);
+    }
+
+    .burger-line {
+      transform: scale(0);
+    }
+  }
+
+  nav > ul {
+    display: flex;
+    gap: 1.6rem;
+
+    li {
+      a {
+        @extend .menu-text;
+      }
+      a:hover {
+        color: $color-secondary;
+      }
+      .active {
+        color: $color-main-60;
+        &:hover {
+          color: $color-main-60;
+        }
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    .call {
+      display: flex;
+      flex-direction: column;
+      @extend .button-text;
+      font-size: 2rem;
+
+      &:hover {
+        color: $color-secondary;
+      }
+
+      span {
+        @extend .p3-reg-text;
+        color: $color-secondary;
+      }
+    }
+  }
+
+  @media (max-width: 1248px) {
+    .main {
+      display: none;
+    }
+  }
+
+  @media (max-width: $lg-screen) {
+    .actions {
+      .black {
+        display: none;
+      }
+      .call {
+        font-size: 1.2rem;
+        span {
+          display: none;
+        }
+      }
+    }
+    .links{
+      flex-direction: row-reverse;
+      width: 57%;
+      justify-content: space-between;
+    }
+  }
+  @media (max-width: $md-screen){
+    .links{
+      width: 63%;
+    }
+  }
+}
+
 .h1-with-crumps {
+  //------------------------------заголовок с хлебными крошками
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +175,7 @@
 }
 
 .factoids {
+  //------------------------------фактоиды
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
@@ -50,6 +200,7 @@
 }
 
 .text-with-media {
+  //------------------------------текст с медиа
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -59,7 +210,7 @@
     padding-right: 20%;
   }
   article {
-    grid-column: 1; 
+    grid-column: 1;
     grid-row: 2;
     > * {
       &:not(:last-child) {
@@ -124,16 +275,16 @@
   }
 
   @media (max-width: $lg-screen) {
-    grid-template-columns: 1fr; 
-    grid-template-rows: auto auto auto; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     row-gap: 2rem;
 
     header {
       grid-column: 1;
-      grid-row: 1; 
+      grid-row: 1;
 
-      h2{
-        max-width: 40rem;
+      h2 {
+        max-width: 36rem;
         padding: 0;
         margin: 0;
       }
@@ -142,12 +293,12 @@
     .container {
       padding-top: 5rem;
       grid-column: 1;
-      grid-row: 2; 
+      grid-row: 2;
     }
 
     article {
       grid-column: 1;
-      grid-row: 3; 
+      grid-row: 3;
       > * {
         &:not(:last-child) {
           padding-right: 0;
@@ -166,6 +317,7 @@
 }
 
 #footer {
+  //------------------------------футер
   position: relative;
   display: grid;
   grid-template-columns: 2fr 1fr;

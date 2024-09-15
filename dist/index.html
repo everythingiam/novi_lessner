@@ -3,27 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" /> -->
   <title>Новый Лесснер / Главная / О проекте</title>
 <link rel="icon" href="favicon.ico"><script defer src="main.js"></script></head>
 <body>
-  <header></header>
+  <header id="header"></header>
   <main class="components-container">
     <section class="h1-with-crumps">
-      <ul class="crumbs">
+      <ul class="breadcrumbs">
         <li>
-          <a href="#">главная</a>
+          <a href="">главная</a>
         </li>
         <li>
-          <a href="#" class="active">о проекте</a>
+          <a href="" class="active">о проекте</a>
         </li>
       </ul>
       <h1>О проекте</h1>
     </section>
-    <section class="text-with-media"></section>
-    <section class="factoids"></section>
+    <section class="text-with-media">
+      <header>
+        <h2>Строим проекты, которым <span>нет равных</span></h2>
+      </header>
+      <article>
+        <p class="lead">
+          Компания «Отделстрой» работает в сфере строительства
+          в Санкт-Петербурге и области с 1994 года.
+        </p>
+        <p>
+          Мы счастливы предлагать людям и обществу комфортные условия
+          для жизни. В нашем портфеле — более миллиона квадратных метров жилья
+          и объектов социальной инфраструктуры. Нашими клиентам стали более
+          15 тысяч семей, которые получили квартиры в срок, либо досрочно.
+        </p>
+        <div class="links">
+          <a href="" class="button">Выбрать квартиру</a>
+          <a href="" class="button empty icon">Найти ближайший офис</a>
+        </div>
+      </article>
+      <div class="container full-width">
+        <picture>
+          <source type="image/webp" media="(min-width: 350px)" srcset="e41d15370baf335b69ba.webp 1x, e41d15370baf335b69ba.webp 2x">
+          <source media="(min-width: 350px)" srcset="67dd5974a57e75238765.jpg 1x, 67dd5974a57e75238765.jpg 2x">
+          <source type="image/webp" srcset="affb19d9cd04e07e0e41.webp 1x, affb19d9cd04e07e0e41.webp 2x">
+          <img src="bb5765335e9a9699d162.jpg" alt="room">
+        </picture>
+      </div>
+    </section>
+    <section class="factoids">
+      <h2>история в цифрах</h2>
+      <ul>
+      <li>
+        <h3>150</h3>
+        <h4>квартир <br>на этаже</h4>
+      </li>
+      <li>
+        <h3>300+</h3>
+        <h4>реализованных <br>проектов</h4>
+      </li>
+    </section>
     <section class="form"></section>
   </main>
-  <footer></footer>
+  <footer id="footer">
+    <div class="info">
+      <p>
+        Вся информация на сайте носит справочный характер и не является
+        публичной офертой, согласно статье 437 ГК РФ. Использование материалов
+        с сайта newlessner.ru не допускается без письменного разрешения ООО
+        «Специализированный застройщик «Отделстрой»
+      </p>
+      <p>© ООО «Специализированный застройщик «Отделстрой» 2023</p>
+      <p>Создание сайта - <a href="https://m18.ru/" rel="noopener">M18</a></p>
+    </div>
+    <div class="contacts">
+      <a
+        href="https://yandex.ru/maps/-/CDDeVDLK"
+        target="_blank"
+        class="adress"
+      >
+        Санкт-Петербург,
+        <br />Светлановский пр., д. 115, корп. 1
+      </a>
+      <a href="tel:+7125612736">(812) 561-27-36</a>
+      <ul class="media">
+        <li>
+          <a href="https://t.me/alinachnnl" class="tg"></a>
+        </li>
+        <li>
+          <a href="" class="dzen"></a>
+        </li>
+        <li>
+          <a href="" class="ok"></a>
+        </li>
+        <li>
+          <a href="" class="vk"></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
