@@ -1,0 +1,69 @@
+@import './colors.scss';
+@import './screens.scss';
+
+$roundings: 3.2rem;
+$transition: 200ms ease-out;
+
+body {
+  @extend .p3-reg-text;
+  overflow-x: hidden;
+  * {
+    color: $color-main;
+  }
+  a,
+  li {
+    transition: $transition;
+  }
+}
+
+.button {
+  @extend .button-text;
+  text-transform: uppercase;
+  padding: 1.4rem 4rem;
+  background-color: $color-accent;
+  color: $color-white;
+  border-radius: 5rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    -webkit-transform: scale(0.96);
+    -moz-transform: scale(0.96);
+    -o-transform: scale(0.96);
+    transform: scale(0.96);
+  }
+  &.icon {
+    padding: 1.2rem 4rem;
+  }
+  &.icon::after {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-left: 1rem;
+    vertical-align: middle;
+    content: '';
+    background: url(../assets/icons/go-white.svg);
+  }
+  &.empty {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    color: $color-main;
+  }
+  &.empty::after {
+    background: url(../assets/icons/go-black.svg);
+  }
+
+  @media (max-width: $lg-screen) {
+    padding: 1.2rem 2rem;
+
+    &.icon {
+      padding: 1rem 2rem;
+    }
+    &.empty {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

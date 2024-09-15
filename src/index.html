@@ -6,7 +6,7 @@
   <title>Новый Лесснер / Главная / О проекте</title>
 </head>
 <body>
-  <header></header>
+  <header id="header"></header>
   <main class="components-container">
     <section class="h1-with-crumps">
       <ul class="breadcrumbs">
@@ -34,11 +34,17 @@
         </p>
         <div class="links">
           <a href="" class="button">Выбрать квартиру</a>
-          <a href="" class="button">Найти ближайший офис</a>
+          <a href="" class="button empty icon">Найти ближайший офис</a>
         </div>
       </article>
-      <picture>
-      </picture>
+      <div class="container full-width">
+        <picture>
+          <source type="image/webp" media="(min-width: 350px)" srcset="./assets/img/desktop.webp 1x, ./assets/img/desktop.webp 2x">
+          <source media="(min-width: 350px)" srcset="./assets/img/desktop.jpg 1x, ./assets/img/desktop.jpg 2x">
+          <source type="image/webp" srcset="./assets/img/mobile.webp 1x, ./assets/img/mobile.webp 2x">
+          <img src="./assets/img/mobile.jpg" alt="room">
+        </picture>
+      </div>
     </section>
     <section class="factoids">
       <h2>история в цифрах</h2>
@@ -54,7 +60,7 @@
     </section>
     <section class="form"></section>
   </main>
-  <footer>
+  <footer id="footer">
     <div class="info">
       <p>
         Вся информация на сайте носит справочный характер и не является

@@ -79,7 +79,7 @@ h4 {
 .button-text {
   font-family: 'Circle';
   font-size: 1.6rem;
-  line-height: auto;
+  line-height: 100%;
 }
 
 @media (max-width: $lg-screen) {
@@ -124,7 +124,7 @@ h4 {
     line-height: 130%;
   }
   .button-text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 100%;
   }
 }

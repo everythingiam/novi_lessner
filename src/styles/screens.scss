@@ -9,14 +9,26 @@ body {
   margin-right: auto;
 }
 
+
+
 @media (max-width: $xs-screen) {
   body {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  section, footer{
+  section,
+  footer {
     margin-top: 4.8rem;
+  }
+
+  .full-width {
+    width: 100vw;
+    margin-left: -16px;
+    picture > img {
+      width: 100%;
+      border-radius: 0rem !important;
+    }
   }
 }
 
@@ -26,19 +38,39 @@ body {
     padding-right: 20px;
   }
 
-  section, footer{
+  section,
+  footer {
     margin-top: 5.6rem;
+  }
+
+  .full-width {
+    width: 100vw;
+    margin-left: -20px;
+    picture > img {
+      width: 100%;
+      border-radius: 0rem !important;
+    }
   }
 }
 
-@media (min-width: $md-screen) and (max-width: $lg-screen) { 
+@media (min-width: $md-screen) and (max-width: $lg-screen) {
   body {
     padding-left: 24px;
     padding-right: 24px;
   }
 
-  section, footer{
+  section,
+  footer {
     margin-top: 6.4rem;
+  }
+
+  .full-width {
+    width: 100vw;
+    margin-left: -24px;
+    picture > img {
+      width: 100%;
+      border-radius: 0rem !important;
+    }
   }
 }
 
@@ -48,7 +80,8 @@ body {
     padding-right: 30px;
   }
 
-  section, footer{
+  section,
+  footer {
     margin-top: 7.2rem;
   }
 }
@@ -59,7 +92,8 @@ body {
     padding-right: 36px;
   }
 
-  section, footer{
+  section,
+  footer {
     margin-top: 8rem;
   }
 }
