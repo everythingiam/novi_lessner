@@ -1,24 +1,37 @@
 @import './colors.scss';
 @import './screens.scss';
 
+/*
+Здесь всё, что касается ui-компонентов и внешнего вида:
+1. Переменная для округления блоков;
+2. Переменная для плавных анимаций;
+3. Класс кнопки (для a и button);
+4. Input'ы, чекбоксы;
+5. Формы, их поведение в списке.
+*/
+
 $roundings: 3.2rem;
 $transition: 200ms ease-out;
 
-body {
+body 
+{
   @extend .p3-reg-text;
   overflow-x: hidden;
   position: relative;
-  * {
-    color: $color-main;
-  }
-  a,
-  li,
-  button {
-    transition: $transition;
-  }
 }
 
-.button {
+body * 
+{
+  color: $color-main;
+}
+
+body a, li, button {
+  transition: $transition;
+}
+
+//по-умолчанию залитая акцентным цветом кнопка
+.button 
+{
   @extend .button-text;
   text-transform: uppercase;
   padding: 1.4rem 4rem;
@@ -28,121 +41,114 @@ body {
   white-space: nowrap;
   display: flex;
   align-items: center;
-
-  &:hover {
-    -webkit-transform: scale(0.96);
-    -moz-transform: scale(0.96);
-    -o-transform: scale(0.96);
-    transform: scale(0.96);
-  }
-  &.icon {
-    padding: 1.2rem 4rem;
-  }
-  &.icon::after {
-    display: inline-block;
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-left: 1rem;
-    vertical-align: middle;
-    content: '';
-    background: url(../assets/icons/go-white.svg);
-  }
-  &.empty {
-    background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
-    color: $color-main;
-  }
-  &.empty::after {
-    background: url(../assets/icons/go-black.svg);
-  }
-
-  &.black {
-    background-color: $color-main;
-    color: $color-white;
-  }
-  &.black::after {
-    background: url(../assets/icons/go-white.svg);
-  }
-  &.small {
-    padding: 0.8rem 2.4rem;
-  }
-
-  @media (max-width: $lg-screen) {
-    padding: 1.2rem 2rem;
-
-    &.icon {
-      padding: 1rem 2rem;
-    }
-    &.empty {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
 }
-#callForm {
-  background-color: rgba(#40454f, 0.7);
-  position: fixed;
-  inset: 0;
-  z-index: 101;
-  overflow: hidden;
-  justify-content: flex-end;
-  transition: all 0.5s ease;
-  display: flex;
-  opacity: 0;
-  pointer-events: none;
-  align-items: center;
+
+.button:hover 
+{
+  transform: scale(0.96);
+}
+
+//.icon - кнопка с иконкой справа
+.button.icon 
+{
+  padding: 1.2rem 4rem;
+}
+
+.button.icon::after 
+{
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 1rem;
+  vertical-align: middle;
+  content: '';
+  background: url(../assets/icons/go-white.svg);
+}
+
+//.empty - кнопка не залитая
+.button.empty 
+{
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  color: $color-main;
+}
+
+.button.empty::after 
+{
+  background: url(../assets/icons/go-black.svg);
+}
+
+//.black - кнопка чёрная залитая
+.button.black 
+{
+  background-color: $color-main;
+  color: $color-white;
+}
+.button.black::after 
+{
+  background: url(../assets/icons/go-white.svg);
+}
+
+//.small - кнопка приплюснутая
+.button.small 
+{
+  padding: 0.8rem 2.4rem;
+}
+
+
+
+input[type="checkbox"] 
+{
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid $color-accent; 
+  border-radius: 0.5rem;
+  background-color: $color-white;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked 
+{
+  background-color: $color-accent; 
+  border-color: $color-accent; 
+}
+
+input[type="checkbox"]:checked::after 
+{
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 1rem;
+  border: solid $color-white;
+  border-width: 0 0.1rem 0.1rem 0;
+  transform: rotate(45deg);
+  top: 0.2rem;
+  left: 0.6rem;
+}
+
+input[type="text"] {
   width: 100%;
-  height: auto;
-  border: 0;
+  padding: 1.2rem 2.2rem;
+  background-color: $color-accent-light;
+  color: $color-main-60;
+  font-size: 1.6rem;
+  color: $color-main;
+  border-radius: 1.2rem;
+}
 
-  .wrapper {
-    height: 100%;
-    background-color: $color-white;
-    position: relative;
-    border-radius: $roundings 0 0 $roundings;
-    display: flex;
-    align-items: center;
-    padding: 0 4rem;
-    max-width: 48rem;
-    width: 100%;
+form 
+{
+  display: flex;
+  gap: 4.8rem;
+  flex-direction: column;
+}
 
-    .lead {
-      @extend .lead-text;
-    }
-
-    span {
-      color: $color-accent;
-    }
-
-    button {
-      align-self: flex-start;
-    }
-    .checkbox {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      label {
-        @extend .p2-light-text;
-        line-height: 2.5rem;
-      }
-
-      a {
-        color: $color-accent;
-      }
-    }
-  }
-
-  @media (max-width: $md-screen) {
-    justify-content: center;
-    align-items: flex-end;
-    .wrapper {
-      padding: 3.2rem 1.6rem;
-      border-radius: $roundings $roundings 0 0;
-      max-width: none;
-      height: auto;
-    }
-  }
+form li:not(:last-child) 
+{
+  margin-bottom: 3.2rem;
 }
 
 .active {
@@ -153,50 +159,50 @@ body {
   overflow: hidden;
 }
 
-input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none; 
-  width: 2rem;
-  height: 2rem;
-  border: 2px solid $color-accent; 
-  border-radius: 0.5rem;
-  background-color: $color-white;
-  cursor: pointer;
-  position: relative;
-
-  &:checked {
-    background-color: $color-accent; 
-    border-color: $color-accent; 
+@media (max-width: $lg-screen) 
+{
+  .button
+  {
+    padding: 1.2rem 2rem;
   }
 
-  &:checked::after {
-    content: "";
-    position: absolute;
-    width: 0.5rem;
-    height: 1rem;
-    border: solid $color-white;
-    border-width: 0 0.1rem 0.1rem 0;
-    transform: rotate(45deg);
-    top: 0.2rem;
-    left: 0.6rem;
-  }
-}
-
-form {
-  display: flex;
-  gap: 4.8rem;
-  flex-direction: column;
-
-  li:not(:last-child) {
-    margin-bottom: 3.2rem;
+  .button.icon 
+  {
+    padding: 1rem 2rem;
   }
 
-  input[type='text'] {
+  .button.empty 
+  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  input[type="checkbox"] 
+  {
+  width: 1.6rem;
+  height: 1.6rem;
+  }
+
+  input[type="text"] 
+  {
     width: 100%;
-    padding: 1rem 2.2rem;
-    background-color: $color-accent-light;
-    color: $color-main-60;
-    font-size: 1.6rem;
-    border-radius: 1.2rem;
+    font-size: 1.3rem;
   }
+
+  input[type="checkbox"]:checked::after 
+  {
+  content: "";
+  top: 0;
+  left: 0.4rem;
+  }
+
+  form 
+  {
+    gap: 3.2rem;
+  }
+  
+  form li:not(:last-child) 
+  {
+    margin-bottom: 2rem;
+  } 
 }

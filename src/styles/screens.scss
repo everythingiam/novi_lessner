@@ -1,100 +1,127 @@
+/*
+Здесь всё, что касается зависимостей от ширины экрана:
+1. Паддинги у body;
+2. Отступы между компонентами;
+3. Класс элемента изображения в полную ширину экрана для мобилы.
+*/
+
 $xs-screen: 359px;
 $md-screen: 639px;
 $lg-screen: 1023px;
 $xl-screen: 1439px;
 
-body {
+body 
+{
   max-width: $xl-screen;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width: $xs-screen) {
-  body {
+@media (max-width: $xs-screen) 
+{
+  body 
+  {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  section,
-  footer {
+  section, footer 
+  {
     margin-top: 4.8rem;
   }
 
-  .full-width {
+  .full-width 
+  {
     width: 100vw;
     margin-left: -16px;
     padding: 0 !important;
-    picture > img {
-      width: 100%;
-      border-radius: 0rem !important;
-    }
+  }
+
+  .full-width > picture > img
+  {
+    width: 100%;
+    border-radius: 0rem !important;
   }
 }
 
-@media (min-width: $xs-screen) and (max-width: $md-screen) {
-  body {
+@media (min-width: $xs-screen) and (max-width: $md-screen) 
+{
+  body 
+  {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  section,
-  footer {
+  section, footer 
+  {
     margin-top: 5.6rem;
   }
 
-  .full-width {
+  .full-width 
+  {
     width: 100vw;
     padding: 0 !important;
     margin-left: -20px;
-    picture > img {
-      width: 100%;
-      border-radius: 0rem !important;
-    }
+  }
+
+  .full-width > picture > img
+  {
+    width: 100%;
+    border-radius: 0rem !important;
   }
 }
 
-@media (min-width: $md-screen) and (max-width: $lg-screen) {
-  body {
+@media (min-width: $md-screen) and (max-width: $lg-screen) 
+{
+  body 
+  {
     padding-left: 24px;
     padding-right: 24px;
   }
 
-  section,
-  footer {
+  section, footer 
+  {
     margin-top: 6.4rem;
   }
 
-  .full-width {
+  .full-width 
+  {
     width: 100vw;
     padding: 0 !important;
     margin-left: -24px;
-    picture > img {
-      width: 100%;
-      border-radius: 0rem !important;
-    }
+  }
+
+  .full-width > picture > img
+  {
+    width: 100%;
+    border-radius: 0rem !important;
   }
 }
 
-@media (min-width: $lg-screen) and (max-width: $xl-screen) {
-  body {
+@media (min-width: $lg-screen) and (max-width: $xl-screen) 
+{
+  body 
+  {
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  section,
-  footer {
+  section, footer 
+  {
     margin-top: 7.2rem;
   }
 }
 
-@media (min-width: $xl-screen) {
-  body {
+@media (min-width: $xl-screen) 
+{
+  body 
+  {
     padding-left: 36px;
     padding-right: 36px;
   }
 
-  section,
-  footer {
+  section, footer 
+  {
     margin-top: 8rem;
   }
 }

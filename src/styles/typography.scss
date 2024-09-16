@@ -1,129 +1,162 @@
 @import './screens.scss';
 
+/* 
+Здесь всё, что касается типографики (всё из фигмы):
+1. Объявление шрифтов во @font-face;
+2. Стили для конкретных типов текста, чтобы их легко наследовать;
+3. Уменьшение шрифта у каждого типа с планшетного размера экрана.
+*/
+
 html {
   /* 1 rem == 10px */
   font-size: 62.5%;
 }
 
-@font-face {
+@font-face 
+{
   font-family: 'Circle Light';
   font-weight: 300;
   src: url('../assets/font/circle/circe-light.ttf') format('truetype');
 }
 
-@font-face {
+@font-face 
+{
   font-family: 'Circle';
   font-weight: 400;
   src: url('../assets/font/circle/circe.ttf') format('truetype');
 }
 
-@font-face {
+@font-face 
+{
   font-family: 'FYL';
   font-weight: 400;
   src: url('../assets/font/fyl/FiveYearsLater.ttf') format('truetype');
 }
 
-.menu-text {
+.menu-text 
+{
   font-family: 'Circle';
   font-size: 2rem;
   line-height: 2.95rem;
 }
-h1 {
+h1 
+{
   font-family: 'FYL';
   text-transform: lowercase;
   font-size: 6.4rem;
   line-height: 100%;
 }
-h2 {
+h2 
+{
   font-family: 'FYL';
   text-transform: lowercase;
   font-size: 4.4rem;
   line-height: 100%;
 }
-h4 {
+h4 
+{
   font-family: 'FYL';
   text-transform: lowercase;
   font-size: 2.6rem;
   line-height: 3.6rem;
 }
-.factoid-text {
+.factoid-text 
+{
   font-family: 'FYL';
   font-size: 11.1rem;
   line-height: 14.71rem;
 }
-.lead-text {
+.lead-text 
+{
   font-family: 'Circle';
   font-size: 2.4rem;
   line-height: 3.2rem;
 }
-.p1-reg-text {
+.p1-reg-text 
+{
   font-family: 'Circle';
   font-size: 2.2rem;
   line-height: 2.8rem;
 }
-.p1-light-text {
+.p1-light-text 
+{
   font-family: 'Circle Light';
   font-size: 2.2rem;
   line-height: 2.8rem;
 }
-.p2-light-text {
+.p2-light-text 
+{
   font-family: 'Circle Light';
   font-size: 1.6rem;
   line-height: 100%;
 }
-.p3-reg-text {
+.p3-reg-text 
+{
   font-family: 'Circle';
   font-size: 1.4rem;
   line-height: 2rem;
 }
-.button-text {
+.button-text 
+{
   font-family: 'Circle';
   font-size: 1.6rem;
   line-height: 100%;
 }
 
-@media (max-width: $lg-screen) {
-  .menu-text {
+@media (max-width: $lg-screen) 
+{
+  .menu-text 
+  {
     font-size: 2rem;
     line-height: auto;
   }
-  h1 {
+  h1 
+  {
     font-size: 3.2rem;
     line-height: 100%;
   }
-  h2 {
+  h2 
+  {
     font-size: 2.8rem;
     line-height: 100%;
   }
-  h4 {
+  h4 
+  {
     font-size: 2rem;
     line-height: 130%;
   }
-  .factoid-text {
+  .factoid-text 
+  {
     font-size: 6rem;
     line-height: 7.95rem;
   }
-  .lead-text {
+  .lead-text 
+  {
     font-size: 1.9rem;
     line-height: 2.5rem;
   }
-  .p1-reg-text {
+  .p1-reg-text 
+  {
     font-size: 1.5rem;
     line-height: 2.21rem;
   }
-  .p1-light-text {
+  .p1-light-text 
+  {
     font-size: 1.8rem;
     line-height: 130%;
   }
-  .p2-light-text {
+  .p2-light-text 
+  {
     font-size: 1.4rem;
     line-height: 120%;
   }
-  .p3-reg-text {
+  .p3-reg-text 
+  {
     font-size: 1.2rem;
     line-height: 130%;
   }
-  .button-text {
+  .button-text 
+  {
     font-size: 1.4rem;
     line-height: 100%;
   }
