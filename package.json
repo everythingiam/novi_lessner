@@ -8,7 +8,7 @@
     "watch": "webpack --watch",
     "build": "webpack",
     "serve": "webpack serve --open",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Alina",

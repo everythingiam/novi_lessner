@@ -17,6 +17,7 @@ html {
   font-family: 'Circle Light';
   font-weight: 300;
   src: url('../assets/font/circle/circe-light.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face 
@@ -24,6 +25,7 @@ html {
   font-family: 'Circle';
   font-weight: 400;
   src: url('../assets/font/circle/circe.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face 
@@ -31,6 +33,7 @@ html {
   font-family: 'FYL';
   font-weight: 400;
   src: url('../assets/font/fyl/FiveYearsLater.ttf') format('truetype');
+  font-display: swap;
 }
 
 .menu-text 

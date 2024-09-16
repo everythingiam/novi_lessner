@@ -3,6 +3,8 @@
 1. Паддинги у body;
 2. Отступы между компонентами;
 3. Класс элемента изображения в полную ширину экрана для мобилы.
+
+сори за !important 
 */
 
 $xs-screen: 359px;
@@ -15,16 +17,12 @@ body
   max-width: $xl-screen;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 @media (max-width: $xs-screen) 
 {
-  body 
-  {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
   section, footer 
   {
     margin-top: 4.8rem;
@@ -44,12 +42,12 @@ body
   }
 }
 
-@media (min-width: $xs-screen) and (max-width: $md-screen) 
+@media (max-width: $md-screen) 
 {
   body 
   {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   section, footer 
@@ -61,7 +59,7 @@ body
   {
     width: 100vw;
     padding: 0 !important;
-    margin-left: -20px;
+    margin-left: -16px !important;
   }
 
   .full-width > picture > img
@@ -71,13 +69,8 @@ body
   }
 }
 
-@media (min-width: $md-screen) and (max-width: $lg-screen) 
+@media (max-width: $lg-screen) 
 {
-  body 
-  {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
 
   section, footer 
   {
@@ -88,7 +81,7 @@ body
   {
     width: 100vw;
     padding: 0 !important;
-    margin-left: -24px;
+    margin-left: -36px;
   }
 
   .full-width > picture > img
@@ -98,14 +91,8 @@ body
   }
 }
 
-@media (min-width: $lg-screen) and (max-width: $xl-screen) 
+@media (max-width: $xl-screen) 
 {
-  body 
-  {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   section, footer 
   {
     margin-top: 7.2rem;
@@ -114,12 +101,6 @@ body
 
 @media (min-width: $xl-screen) 
 {
-  body 
-  {
-    padding-left: 36px;
-    padding-right: 36px;
-  }
-
   section, footer 
   {
     margin-top: 8rem;
