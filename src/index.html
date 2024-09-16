@@ -55,13 +55,12 @@
       </nav>
     </div>
     <div class="actions">
-      <button class="call">
+      <button class="call" id="callFormBtn">
         812 561-03-75
         <span>заказать звонок</span>
       </button>
       <a href="" class="button black icon small">выбрать квартиру</a>
     </div>
-    
   </header>
   <main class="components-container">
     <section class="h1-with-crumps">
@@ -154,5 +153,31 @@
       </ul>
     </div>
   </footer>
+  <dialog id="callForm" class="dialog">
+    <div class="wrapper">
+      <button type="button" class="close"></button>
+      <form method="dialog">
+        <h2>заказать <span>звонок</span></h2>
+        <p class="lead">Персональный менеджер ответит 
+          на все вопросы и подготовит для вас индивидуальное предложение.
+        </p>
+        <ul class="fields">
+          <li>
+            <input type="text" placeholder="Имя" name="name" required />
+          </li>
+          <li>
+            <input type="text" placeholder="Телефон" name="phone" data-type="phone" required />
+          </li>
+          <li class="checkbox">
+            <input type="checkbox" name="personal" required />
+            <label for="personal">Согласие на обработку <a href="">персональных данных</a></label>
+          </li>
+        </ul>
+        <button class="button icon" type="submit">
+          отправить
+        </button>
+      </form>
+    </div>
+  </dialog>
 </body>
 </html>
